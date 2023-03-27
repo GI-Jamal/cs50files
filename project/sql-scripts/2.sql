@@ -1,0 +1,1 @@
+INSERT INTO cart (user_id, product_key, quantity, price_per_unit) VALUES(?, ?, ?, SELECT price FROM products WHERE product_key = ?);

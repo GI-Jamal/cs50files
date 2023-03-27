@@ -1,0 +1,1 @@
+SELECT symbol, shares, share_price, date_time FROM stockpurchases WHERE userid = 4;

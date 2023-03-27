@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS "products" (
+    product_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    product_name TEXT NOT NULL,
+    price FLOAT NOT NULL
+);

@@ -1,0 +1,1 @@
+SELECT P.product_name, P.price, O.quantity, O.quantity*P.price AS subtotal FROM order_info AS O JOIN products AS P ON P.product_id = O.product_id WHERE order_id = ?;

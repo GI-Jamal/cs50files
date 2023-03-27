@@ -1,0 +1,1 @@
+UPDATE cart SET quantity = quantity + 2 WHERE user_id = 1 AND product_id = 3;

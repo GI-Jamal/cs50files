@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Products
+{% endblock %}
+
+{% block main %}
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Small</h5>
+            <div class="card-body">
+                <h5 class="card-title">$10</h5>
+                <p class="card-text">For riders with a smaller stature</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="1">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Medium</h5>
+            <div class="card-body">
+                <h5 class="card-title">$20</h5>
+                <p class="card-text">For riders with a medium stature</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="2">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Large</h5>
+            <div class="card-body">
+                <h5 class="card-title">$30</h5>
+                <p class="card-text">For riders with a stature stature</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="3">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Extra Small</h5>
+            <div class="card-body">
+                <h5 class="card-title">$20</h5>
+                <p class="card-text">For riders with a extra small stature</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="4">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Extra Medium</h5>
+            <div class="card-body">
+                <h5 class="card-title">$40</h5>
+                <p class="card-text">For riders with a extra medium stature</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="5">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card">
+            <h5 class="card-header">Extra Large</h5>
+            <div class="card-body">
+                <h5 class="card-title">$60</h5>
+                <p class="card-text">For riders with a extra large stature.</p>
+                <form action="/products" method="post">
+                    <input type="number" class="text-center" name="quantity" min="1" max="100" value="1">
+                    <input type="hidden" name="item" value="6">
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

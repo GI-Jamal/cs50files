@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkResponse() {
+                let response = document.querySelector('#q2response').value
+                if (response == 26) {
+                    document.querySelector('#q2response').style.backgroundColor = 'green';
+                    document.querySelector('#feedback2').innerHTML = 'Correct!';
+                }
+                else {
+                    document.querySelector('#q2response').style.backgroundColor = 'red';
+                    document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                let incorrect = document.querySelector('.incorrect');
+                incorrect.addEventListener('click', function() {
+                    incorrect.style.backgroundColor = 'red';
+                    document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <hr3>What color do you get when mixing blue and red?</hr3>
+                <br>
+                <button class="incorrect">orange</button>
+                <button class="incorrect">green</button>
+                <button class="correct">purple</button>
+
+                <p id="feedback1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <hr3>How many letters are there in the english alphabet?</hr3>
+                <br>
+                <br>
+                <form>
+                    <input type="text" id="q2response">
+                    <input type="button" value="submit" onClick="checkResponse()">
+                </form>
+
+                <p id="feedback2"></p>
+
+            </div>
+        </div>
+    </body>
+</html>

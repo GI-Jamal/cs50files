@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+<div class="container py-5 text-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Order ID</th>
+                <th class="text-start">Order Date</th>
+                <th class="text-center">Item Count</th>
+                <th class="text-end">Total</th>
+                <th class="text-end">Order Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td class="text-start">{{ item.order_id }}</td>
+                    <td class="text-start">{{ item.order_date }}</td>
+                    <td class="text-center">{{ item.item_count }}</td>
+                    <td class="text-end">{{ item.total | usd }}</td>
+                    <td class="text-end">
+                        <form action="/orderinfo", method="post">
+                            <input type="hidden", name="order_id" value="{{ item.order_id }}">
+                            <input type="submit" value="View" class="btn btn-primary">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Based on a process of elimination, sort 1 must be using a bubble sort algorithm.
+
+sort2 uses: Merge Sort
+
+How do you know?: Based on the visualizations in class, the merge sort algorithm performs faster than either a bubble sort or selection sorting algorithm. In this case, sort 2 performed better than both sort 1 and sort 3 in most tested cases. Thus it is most likely using the merge sort algorithm.
+
+sort3 uses: Selection Sort
+
+How do you know?: Based on the visualizations from class, when sorting an already sorted dataset, the selection sorting algorithm performs the worst with regards to run time. From the timed tests performed on the sorted datasets, sort 3 performed the worst. Thus indicating that it uses the selection sort algorithm.

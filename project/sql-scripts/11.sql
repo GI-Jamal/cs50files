@@ -1,0 +1,1 @@
+SELECT SUM(quantity) as Quantity FROM cart WHERE user_id = ? GROUP BY user_id;

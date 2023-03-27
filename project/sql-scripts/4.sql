@@ -1,0 +1,1 @@
+UPDATE cart set user_id = 1 WHERE user_id = "A";

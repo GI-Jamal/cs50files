@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+h5 {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #08c9a9;
+    border-color: #08c9a9;
+}
